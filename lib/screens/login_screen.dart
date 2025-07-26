@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'dart:math' as math;
+import '../services/auth_service.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 class LoginScreen extends StatefulWidget {
   @override
@@ -14,6 +16,7 @@ class _LoginScreenState extends State<LoginScreen>
   bool loading = false;
   late AnimationController _animationController;
   late Animation<double> _fadeAnimation;
+  final AuthService _authService = AuthService();
 
   @override
   void initState() {
@@ -40,15 +43,29 @@ class _LoginScreenState extends State<LoginScreen>
       error = '';
     });
 
-    // Simulate login delay
-    await Future.delayed(Duration(seconds: 1));
+    try {
+      String? errorMessage = await _authService.signIn(
+        emailController.text.trim(),
+        passwordController.text,
+      );
 
-    setState(() {
-      loading = false;
-    });
+      setState(() {
+        loading = false;
+      });
 
-    // For now, just navigate to home
-    Navigator.pushReplacementNamed(context, '/home');
+      if (errorMessage != null) {
+        setState(() {
+          error = errorMessage;
+        });
+      } else {
+        Navigator.pushReplacementNamed(context, '/home');
+      }
+    } catch (e) {
+      setState(() {
+        loading = false;
+        error = 'An error occurred during login.';
+      });
+    }
   }
 
   @override

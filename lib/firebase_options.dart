@@ -42,11 +42,12 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'YOUR-API-KEY',
-    appId: 'YOUR-APP-ID',
-    messagingSenderId: 'YOUR-SENDER-ID',
-    projectId: 'YOUR-PROJECT-ID',
-    authDomain: 'YOUR-PROJECT-ID.firebaseapp.com',
-    storageBucket: 'YOUR-PROJECT-ID.appspot.com',
+    apiKey: 'AIzaSyC5pKU2DgE7ZQ28QtpX54IfTj1-3vq76Mg',
+    appId: '1:557911816843:web:b270b830a57ab218f1b28e',
+    messagingSenderId: '557911816843',
+    projectId: 'sankatmochan-ai',
+    authDomain: 'sankatmochan-ai.firebaseapp.com',
+    storageBucket: 'sankatmochan-ai.firebasestorage.app',
+    measurementId: 'G-R3S023Z8DC',
   );
 }
