@@ -1,0 +1,32 @@
+{
+  "rahu_sun_conjunction": {
+    "name": "Rahu-Sun Conjunction",
+    "planets": ["Rahu", "Sun"],
+    "orb": 6.0,
+    "severity": 9,
+    "effects": ["Authority conflicts", "Ego issues", "Career obstacles"],
+    "remedies": ["Chant Aditya Hridayam daily", "Offer water to Sun", "Donate copper items"],
+    "confirmed_count": 0,
+    "accuracy_score": 0.0
+  },
+  "mars_saturn_conjunction": {
+    "name": "Mars-Saturn Conjunction", 
+    "planets": ["Mars", "Saturn"],
+    "orb": 6.0,
+    "severity": 8,
+    "effects": ["Delays", "Accidents", "Frustration"],
+    "remedies": ["Recite Hanuman Chalisa", "Donate iron items", "Practice patience"],
+    "confirmed_count": 0,
+    "accuracy_score": 0.0
+  },
+  "ketu_moon_conjunction": {
+    "name": "Ketu-Moon Conjunction",
+    "planets": ["Ketu", "Moon"],
+    "orb": 4.0,
+    "severity": 7,
+    "effects": ["Mental stress", "Emotional instability", "Family issues"],
+    "remedies": ["Chant Mahamrityunjaya Mantra", "Practice meditation", "Worship Goddess Durga"],
+    "confirmed_count": 0,
+    "accuracy_score": 0.0
+  }
+}

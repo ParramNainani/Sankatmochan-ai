@@ -1,0 +1,13 @@
+{
+  "Param": {
+    "name": "Param",
+    "birth_date": "2006-12-13",
+    "birth_time": "21:35:00",
+    "birth_place": "Delhi, India",
+    "latitude": 28.6139,
+    "longitude": 77.2090,
+    "confirmed_patterns": [],
+    "accuracy_feedback": {},
+    "last_updated": "2024-01-01"
+  }
+}
