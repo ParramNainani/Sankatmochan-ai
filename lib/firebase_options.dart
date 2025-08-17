@@ -42,13 +42,6 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyC5pKU2DgE7ZQ28QtpX54IfTj1-3vq76Mg',
-    appId: '1:557911816843:web:b270b830a57ab218f1b28e',
-    messagingSenderId: '557911816843',
-    projectId: 'sankatmochan-ai',
-    authDomain: 'sankatmochan-ai.firebaseapp.com',
-    storageBucket: 'sankatmochan-ai.firebasestorage.app',
-    databaseURL: 'https://sankatmochan-ai-default-rtdb.firebaseio.com',
-    measurementId: 'G-R3S023Z8DC',
+      // Your API Details.. 
   );
 }
