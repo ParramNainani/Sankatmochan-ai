@@ -48,6 +48,7 @@ class DefaultFirebaseOptions {
     projectId: 'sankatmochan-ai',
     authDomain: 'sankatmochan-ai.firebaseapp.com',
     storageBucket: 'sankatmochan-ai.firebasestorage.app',
+    databaseURL: 'https://sankatmochan-ai-default-rtdb.firebaseio.com',
     measurementId: 'G-R3S023Z8DC',
   );
 }

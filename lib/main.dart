@@ -10,6 +10,7 @@ import 'screens/planetary_positions_screen.dart';
 import 'screens/compatibility_screen.dart';
 import 'screens/muhurat_screen.dart';
 import 'screens/gemstones_screen.dart';
+import 'screens/charts_library_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -87,6 +88,7 @@ class MyApp extends StatelessWidget {
         '/compatibility': (context) => CompatibilityScreen(),
         '/muhurat': (context) => MuhuratScreen(),
         '/gemstones': (context) => GemstonesScreen(),
+        '/charts-library': (context) => ChartsLibraryScreen(),
       },
     );
   }

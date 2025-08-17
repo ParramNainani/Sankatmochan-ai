@@ -156,6 +156,14 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                             Color(0xFF00BCD4),
                             () => Navigator.pushNamed(context, '/gemstones'),
                           ),
+                          _buildFeatureCard(
+                            'Charts Library',
+                            Icons.folder_open,
+                            'View stored birth charts',
+                            Color(0xFF795548),
+                            () =>
+                                Navigator.pushNamed(context, '/charts-library'),
+                          ),
                         ],
                       ),
                       SizedBox(height: 30),

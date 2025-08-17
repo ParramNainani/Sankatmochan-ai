@@ -16,6 +16,22 @@ class AuthService {
         await _db.collection('users').doc(user.uid).set({
           'email': user.email,
           'uid': user.uid,
+          'createdAt': FieldValue.serverTimestamp(),
+          'lastLogin': FieldValue.serverTimestamp(),
+          'profile': {
+            'name': '',
+            'birthDate': '',
+            'birthTime': '',
+            'birthPlace': '',
+            'zodiacSign': '',
+            'moonSign': '',
+            'ascendant': '',
+          },
+          'preferences': {
+            'notifications': true,
+            'language': 'en',
+            'theme': 'cosmic',
+          }
         });
       }
       return null;
@@ -39,5 +55,29 @@ class AuthService {
 
   Future<void> signOut() async {
     await _auth.signOut();
+  }
+
+  Future<void> updateUserProfile(
+      String uid, Map<String, dynamic> profileData) async {
+    try {
+      await _db.collection('users').doc(uid).update({
+        'profile': profileData,
+        'lastUpdated': FieldValue.serverTimestamp(),
+      });
+    } catch (e) {
+      throw Exception('Failed to update profile: $e');
+    }
+  }
+
+  Future<Map<String, dynamic>?> getUserProfile(String uid) async {
+    try {
+      DocumentSnapshot doc = await _db.collection('users').doc(uid).get();
+      if (doc.exists) {
+        return doc.data() as Map<String, dynamic>;
+      }
+      return null;
+    } catch (e) {
+      throw Exception('Failed to get profile: $e');
+    }
   }
 }

@@ -1,5 +1,13 @@
-# Essential dependencies for Sankatmochan AI
-matplotlib>=3.5.0
-numpy>=1.21.0
-requests>=2.25.0
-python-dateutil>=2.8.0
+matplotlib
+numpy
+requests
+python-dateutil
+Flask
+Flask-CORS
+Werkzeug
+ephem
+pandas
+seaborn
+firebase-admin==6.2.0
+google-cloud-storage==2.10.0
+google-cloud-firestore==2.13.1 

@@ -3,7 +3,7 @@ Demo script to showcase Sankatmochan AI capabilities
 """
 
 import datetime
-from main import SankatmochanAI
+from scripts.main import SankatmochanAI
 
 def run_demo():
     """Run comprehensive demo of the system"""
@@ -20,7 +20,7 @@ def run_demo():
     ai.set_birth_details(
         name="Demo User",
         birth_date=datetime.date(2006, 12, 13),
-        birth_time=datetime.time(21, 35),
+        birth_time=datetime.time(03, 20),
         place="Delhi, India"
     )
     
@@ -34,10 +34,13 @@ def run_demo():
     # Show current dasha
     print("\n3. Current Dasha Status:")
     print("-" * 40)
-    if ai.current_dasha:
+    if ai.current_dasha and 'current_mahadasha' in ai.current_dasha:
         print(f"Mahadasha: {ai.current_dasha['current_mahadasha']}")
         print(f"Remaining: {ai.current_dasha['remaining_years']:.1f} years")
         print(f"Completion: {ai.current_dasha['completion_percentage']:.1f}%")
+    else:
+        print("Current dasha information not available")
+        print(f"Debug: current_dasha = {ai.current_dasha}")
     
     # Show detected patterns
     print(f"\n4. Detected Patterns ({len(ai.detected_patterns)}):")
