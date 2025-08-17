@@ -29,52 +29,8 @@ pip install -r requirements.txt
 # Main interactive system
 python main.py
 
-# Quick demo
-python demo.py
-
-# Advanced features demo
-python demo_advanced.py
-
 # Corrected calculations (matching your chart)
 python main_corrected.py
-\`\`\`
-
-## 📁 Project Structure
-
-\`\`\`
-sankatmochan-ai/
-│
-├── main.py                    # Main entry point
-├── demo.py                    # Quick demo script
-├── corrected_calculations.py  # Fixed calculations matching your chart
-├── precise_calculations.py    # Advanced astronomical calculations
-├── pattern_detector.py        # ML-based pattern detection
-├── dasha_calculator.py        # 100% accurate dasha calculations
-├── main_prediction_system.py  # Advanced prediction engine
-├── chart_visualizer.py        # Professional chart creation
-├── main_corrected.py          # Corrected system entry point
-├── demo_advanced.py           # Advanced features demo
-├── requirements.txt           # Dependencies
-│
-├── core/
-│   ├── calculations.py        # Core astronomical calculations
-│   ├── patterns.py           # Core pattern detection
-│   ├── dashas.py             # Core dasha calculations
-│   └── predictions.py        # Main prediction engine
-│
-├── utils/
-│   ├── helpers.py            # Utility functions
-│   └── constants.py          # Astrological constants
-│
-├── data/
-│   ├── user_profiles.json    # User data storage
-│   ├── patterns.json         # Pattern database
-│   └── accuracy.json         # Accuracy tracking
-│
-└── outputs/
-    ├── charts/               # Generated charts
-    └── reports/              # Generated reports
-\`\`\`
 
 ## 🎯 Key Corrections Made
 
